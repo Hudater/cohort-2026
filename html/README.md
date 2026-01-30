@@ -10,7 +10,7 @@ git clone https://github.com/Hudater/cohort-2026.git
 2. Change directory to the HTML directory:
 
 ```bash
-cd cohort-2926/html
+cd cohort-2026/html
 ```
 
 ### Resources
