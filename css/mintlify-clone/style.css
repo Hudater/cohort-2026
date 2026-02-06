@@ -602,7 +602,7 @@ header {
     opacity: 1;
 }
 
-.heading-form-button{
+.heading-form-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -628,18 +628,20 @@ header {
     transition-duration: 100ms;
 }
 
-.heading-form-button:hover{
+.heading-form-button:hover {
     opacity: 0.85;
     border-radius: 999px;
     border-width: 1px;
     border-style: solid;
     border-color: var(--color-background-invert);
 }
+
 .heading-form-button:focus-visible {
     outline-width: 2px;
     outline-style: solid;
     outline-color: var(--color-brand);
 }
+
 #hero-image {
     /* background-image: url(./assets/img/hero-image-light.svg); */
     user-select: none;
@@ -672,4 +674,102 @@ header {
     overflow: clip;
     max-width: 67.5rem;
     /* max-width: 67.5rem; */
+}
+
+/* trusted by company section */
+
+.company-logos-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    z-index: 600;
+    /* border: 2px solid red; */
+}
+
+.company-logos-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 1.75rem;
+    max-width: 64rem;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 600;
+    /* border: 2px solid blue; */
+    margin: auto;
+    padding: auto;
+    margin-top: 40%;
+}
+
+.company-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 100%;
+    z-index: 600;
+    /* border: 2px solid green; */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.company-logos-svg {
+    z-index: 600;
+    width: 100%;
+    height: 68px;
+    width: auto;
+    
+}
+
+#company-logos-svg-anthropic {
+    /* border: 5px solid orange; */
+    background-image: url(./assets/company-logos/anthropic-logo.svg);
+    width: 130;
+    height: 20;
+    fill: none;
+    /* color: #000; */
+    /* vertical-align: middle; */
+    display: block;
+}
+
+#company-logos-svg-coinbase {
+    /* border: 5px solid orange; */
+    background-image: url(./assets/company-logos/coinbase-logo.svg);
+}
+
+#company-logos-svg-ms {
+    /* border: 5px solid orange; */
+    background-image: url(./assets/company-logos/ms-logo.svg);
+}
+
+#company-logos-svg-perplexity {
+    /* border: 5px solid orange; */
+    background-image: url(./assets/company-logos/perplexity-logo.svg);
+}
+
+#company-logos-svg-hubspot {
+    /* border: 5px solid orange; */
+    background-image: url(./assets/company-logos/hubspot-logo.svg);
+}
+
+#company-logos-svg-x {
+    /* border: 5px solid orange; */
+    background-image: url(./assets/company-logos/x-logo.svg);
+}
+
+#company-logos-svg-paypal {
+    /* border: 5px solid orange; */
+    background-image: url(./assets/company-logos/paypal-logo.svg);
+}
+
+#company-logos-svg-lovable {
+    /* border: 5px solid orange; */
+    background-image: url(./assets/company-logos/lovable-logo.svg);
 }
