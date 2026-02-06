@@ -2,7 +2,14 @@
 
 ## Assignments
 
+### HTML
 [HTML Resume](html/README.md)
+
+### CSS and HTML
+[Mintlify Clone](css/mintlify-clone/index.html)
+<br>
+[Cursor Clone](css/cursor-clone/index.html)
+
 
 ## Blogs
 
