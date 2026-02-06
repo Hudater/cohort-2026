@@ -435,17 +435,17 @@ header {
     /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    width: 100%;
+    /* height: 100vh; */
+    height: 1157.030px;
     min-width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     position: absolute;
     display: block;
     /* object-fit: cover; */
     user-select: none;
-    top: 0%;
+    top: -93px;
     left: 0%;
-    bottom: 0%;
+    bottom: 160px;
     right: 0%;
     -webkit-mask-image: linear-gradient(#000 0%, rgba(0, 0, 0, .99) 18.5%, rgba(0, 0, 0, .953) 34.3%, rgba(0, 0, 0, .894) 47.6%, rgba(0, 0, 0, .824) 58.5%, rgba(0, 0, 0, .74) 67.5%, rgba(0, 0, 0, .647) 74.7%, rgba(0, 0, 0, .55) 80.3%, rgba(0, 0, 0, .45) 84.7%, rgba(0, 0, 0, .353) 88%, rgba(0, 0, 0, .26) 90.5%, rgba(0, 0, 0, .176) 92.5%, rgba(0, 0, 0, .106) 94.2%, rgba(0, 0, 0, .047) 95.9%, rgba(0, 0, 0, .01) 97.7%, transparent 100%);
     mask-image: linear-gradient(#000 0%, rgba(0, 0, 0, .99) 18.5%, rgba(0, 0, 0, .953) 34.3%, rgba(0, 0, 0, .894) 47.6%, rgba(0, 0, 0, .824) 58.5%, rgba(0, 0, 0, .74) 67.5%, rgba(0, 0, 0, .647) 74.7%, rgba(0, 0, 0, .55) 80.3%, rgba(0, 0, 0, .45) 84.7%, rgba(0, 0, 0, .353) 88%, rgba(0, 0, 0, .26) 90.5%, rgba(0, 0, 0, .176) 92.5%, rgba(0, 0, 0, .106) 94.2%, rgba(0, 0, 0, .047) 95.9%, rgba(0, 0, 0, .01) 97.7%, transparent 100%);
@@ -653,12 +653,12 @@ header {
     padding: 0px;
     background-position: 100%;
     background-repeat: no-repeat;
-    height: auto;
-    width: 100%;
+    /* height: auto; */
+    /* width: 100%; */
     justify-content: center;
     align-items: center;
-    /* top: -10rem; */
-    top: 0;
+    top: 9.2rem;
+    /* top: 0; */
     bottom: 0;
     left: 0;
     right: 0;
