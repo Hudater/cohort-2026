@@ -67,13 +67,13 @@
     --color-text-invert: #08090a;
     --color-text-soft: #ffffffb3;
     --color-text-sub: #ffffff99;
-    --color-border-sub: #ffffff12;
-    --color-background-soft: #ffffff0d;
-    --color-border-surface: lab(100% 0 0 / .05);
+    --color-border-sub: #08090a12;
+    --color-background-soft: #08090a26;
+    --color-border-surface: #ffffff0d;
     --color-muted: #838484;
-    --color-border-soft: lab(100% 0.01 -0.01 / 0.15);
-    --color-brand: lab(79.9844% -59.6292 22.5096);
-    --color-brand-light: lab(51.3415% -41.5657 15.3527);
+    --color-border-soft: #ffffff26;
+    --color-brand: #2ce19a;
+    --color-brand-light: #188b5f;
     --color-border-solid: #ffffff;
     --color-muted-invert: #08090a80;
     --color-dropdown-hover: #f7f7f7;
@@ -86,6 +86,9 @@ a:focus,
 a:active {
     text-decoration: none;
 }
+html {
+    font-family: inter, inter Fallback, system-ui, sans-serif;
+}
 
 * {
     margin: 0;
@@ -94,12 +97,18 @@ a:active {
     box-sizing: border-box;
     line-height: 1.5;
     tab-size: 4;
-    font-family: var(--inter, --geist-mono, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+    font-family: inherit;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-synthesis: none;
     scrollbar-gutter: stable
+}
+
+code,
+pre,
+.mono {
+    font-family: "Geist Mono", "Geist Mono Fallback", monospace;
 }
 
 b,
@@ -154,13 +163,6 @@ header {
     max-width: 66rem;
 }
 
-a:focus {
-    width: fit-content;
-    outline-width: 2px;
-    outline-offset: 2px;
-    border-radius: 0.125rem;
-}
-
 .header-nav {
     padding-left: 150px;
     font-size: 15px;
@@ -196,7 +198,7 @@ a:focus {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
     cursor: pointer;
-    font-weight: 570;
+    font-weight: 500;
     line-height: 150%;
     color: var(--color-text-main);
     /* border: 2px solid red; */
@@ -306,6 +308,7 @@ a:focus {
     align-items: center;
     line-height: 150%;
 }
+
 .header-dropdown-svg {
     user-select: none;
     width: 1rem;
@@ -326,6 +329,7 @@ a:focus {
     grid-column: 1 / -1;
     user-select: none;
 }
+
 /* DROPDOWN STYLES END*/
 /* CTA buttons header */
 .header-cta-wrapper {
@@ -448,48 +452,67 @@ a:focus {
 .blog-cta-button {
     background-color: #08090a26;
     color: #fff;
-    /* position: absolute; */
-    /* display: flex; */
-    display: block;
-    justify-content: center;
-    align-content: center;
-    /* height: 100vh; */
-    margin: 0 auto;
-    padding-left: .25rem;
-    padding-right: .5rem;
-    padding-block: .25rem;
-    gap: 0.625rem;
-    /* gap: 10.625px; */
-    border-radius: 60px;
+    position: absolute;
+    display: flex;
     align-items: center;
+    /* background-color: var(--color-background-soft); */
+    background-color: #08090a26;
+    backdrop-filter: blur(12px);
+    padding-left: 0.25rem;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    /* padding-block: .25rem; */
+    gap: 0.625rem;
+    border-radius: 60px;
     cursor: pointer;
     left: 50%;
-    top: 30px;
+    transform: translateX(-50%);
+    top: 95px;
     width: fit-content;
+    border: 0;
+    font-display: swap;
+    line-height: 1.5;
+}
+
+.blog-cta-button:hover {
+    background-color: var(--color-border-sub);
 }
 
 .blog-cta-new-green {
-    background-color: var(--color-brand-light);
-    font-size: .75rem;
-    line-height: 150%;
-    font-weight: 500;
     text-transform: uppercase;
-    color: #fff;
-    padding-block: 0.125rem;
-    padding-inline: 0.5rem;
-    padding: 10px 10px;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+    /* padding-inline: .25rem;
+    padding-block: .25rem; */
     border-radius: 1.5rem;
+    background-color: var(--color-brand-light);
+    color: #ffffff;
+    font-size: .75rem;
+    font-weight: 500;
+    line-height: 1.5;
+    box-shadow: 0px 2px 4px 0px var(--color-background-soft);
+}
+
+.blog-cta-para {
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: nowrap;
+    line-height: 1.5;
+    /* word-spacing: ; */
 }
 
 .blog-cta-arrow-svg {
     user-select: none;
     color: #fff;
-    height: 17px;
-    width: 17px;
+    height: 1rem;
+    width: 1rem;
     vertical-align: middle;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .heading {
