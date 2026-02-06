@@ -2,13 +2,11 @@
 
 ## Assignments
 
-### HTML
-[HTML Resume](html/README.md)
-
-### CSS and HTML
-[Mintlify Clone](css/mintlify-clone/index.html)
-<br>
-[Cursor Clone](css/cursor-clone/index.html)
+| Stack | Live URI                                                                   | Readme                                      |
+|-------|----------------------------------------------------------------------------|---------------------------------------------|
+| HTML  | [HTML Resume](https://cohort.hudater.dev/html/resume.html)                 | [README.md](./html/README.md)               |
+| CSS   | [Mintlify Clone](https://cohort.hudater.dev/css/mintlify-clone/index.html) | [README.md](./css/mintlify-clone/README.md) |
+| CSS   | [Cursor Clone](https://cohort.hudater.dev/css/cursor-clone/index.html)     | [README.md](./css/cursor-clone/README.md)   |
 
 
 ## Blogs
