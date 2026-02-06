@@ -77,6 +77,7 @@
     --color-border-solid: #ffffff;
     --color-muted-invert: #08090a80;
     --color-dropdown-hover: #f7f7f7;
+    --color-header-sales: #ffffff0d;
 }
 
 a:link,
@@ -385,7 +386,7 @@ header {
 }
 
 .header-cta-a-sales {
-    background-color: var(--color-background-soft);
+    background-color: var(--color-header-sales);
     border-color: transparent;
     border-width: 1px;
     border-style: solid;
@@ -455,8 +456,8 @@ header {
     position: absolute;
     display: flex;
     align-items: center;
-    /* background-color: var(--color-background-soft); */
-    background-color: #08090a26;
+    background-color: var(--color-background-soft);
+    /* background-color: #08090a26; */
     backdrop-filter: blur(12px);
     padding-left: 0.25rem;
     padding-right: 0.5rem;
