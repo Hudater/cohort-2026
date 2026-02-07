@@ -531,7 +531,7 @@ header {
 }
 
 .heading {
-    z-index: 50;
+    z-index: 20;
     display: flex;
     margin-block-start: 0.83em;
     margin-block-end: 0.83em;
@@ -1050,6 +1050,7 @@ header {
 .ente-feat-cta:hover {
     background-color: #08090ab6;
 }
+
 /* .column-1,
 .column-2 {
     display: flex;
@@ -1106,4 +1107,122 @@ header {
 
 .column-description {
     color: #393A3B;
+}
+
+.brand-showcase-slide {
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+.showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    /* width: 100vw; */
+    height: 100vh;
+    overflow: hidden;
+}
+
+.showcase-image {
+    background-image: url(./assets/slide/ente-slide-anthropic.png);
+    /* max-width: 48rem; */
+    margin: auto;
+    height: 518px;
+    width: 1088px;
+    /* width: 100%; */
+    position: relative;
+    isolation: isolate;
+    user-select: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* border: 2px solid red; */
+    border-radius: 1.5rem;
+    /* object-fit: contain; */
+    background-size: 100% 100%;
+}
+
+.showcase-image:hover {
+    filter: brightness(80%);
+    transition: all 0.2s ease;
+}
+
+.brand-logo-footer {
+    position: absolute;
+    /* z-index: 99999; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    /* bottom: -10px; */
+    min-width: 0;
+    overflow: clip;
+    margin-top: 27%;
+    margin-bottom: 100px;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    --mask-left: black 0px;
+    --mask-right: black 100%;
+    mask-image: linear-gradient(to right,
+            var(--mask-left),
+            black,
+            var(--mask-right));
+}
+
+/* 
+.brand-scrollbar {
+    position: relative;
+    overflow-x: auto;
+    scrollbar-width: none;
+    display: none;
+} */
+
+.brand-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: max-content;
+    min-width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.brand-button {
+    /* color: black; */
+    display: flex;
+    cursor: pointer;
+    transition-property: filter, opacity;
+    transition-duration: 300ms;
+    height: auto;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border-radius: 0.125rem;
+    border: 0;
+    /* border: 2px solid red; */
+    background-color: transparent;
+    width: 140px;
+    /* width: 100%; */
+    background-repeat: no-repeat;
+    background-position: center;
+    /* padding-top: 0; */
+    /* padding-bottom: 0; */
+}
+.button-image-svg {
+    border-radius: 0.125rem;
+    height: 8rem;
+    width: 100%;
+    /* min-width: 100%; */
+    /* border: 2px solid red; */
+    filter: grayscale(100%);
+}
+
+.brand-button:focus-visible .button-image-svg {
+    outline-offset: 4px;
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: var(--color-brand-light);
 }
