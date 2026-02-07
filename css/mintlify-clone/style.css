@@ -1340,3 +1340,117 @@ header {
     height: 45px;
     width: 230px;
 }
+
+.carousel-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.carousel-para {
+    color: #393A3B;
+    font-size: 1rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.read-story-span {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--color-muted);
+    border-radius: 0.125rem;
+    cursor: pointer;
+}
+
+.read-story-span:hover {
+    color: var(--color-brand-light);
+}
+
+.read-story-svg {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    transform: rotate(-90deg);
+    transition-property: transform;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
+    user-select: none;
+}
+
+.read-story-span:hover .read-story-svg {
+    /* transform: translateX(0.125rem); */
+    color: var(--color-brand-light);
+    transform: rotate(-90deg) translateX(0.125rem);
+}
+
+.carousel-slider-arrows {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.arrow-prev{
+    /* background-color: transparent !important; */
+    /* border-color: transparent !important; */
+    opacity: 0.5;
+    pointer-events: none;
+}
+.carousel-arrows {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-text-main);
+    border: 1px solid transparent;
+    border-radius: 9999px;
+    background: transparent;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition-property: color, background-color;
+    transition-duration: 100ms;
+    outline-offset: 2px;
+    position: relative;
+    width: 2.375rem;
+    height: 2.375rem;
+    top: 0;
+    left: 0;
+    padding: 0;
+}
+
+.carousel-arrows:focus-visible {
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: var(--color-brand-light);
+}
+
+.carousel-arrows:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+.carousel-arrows:hover>svg {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.carousel-arrows:active {
+    transform: scale(0.96);
+}
+
+.carousel-arrows:focus-visible {}
