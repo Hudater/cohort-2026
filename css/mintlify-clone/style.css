@@ -1739,7 +1739,7 @@ footer {
     padding-bottom: 1.5rem;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: var(--border-surface);
+    border-bottom-color: #08090a0d;
 }
 
 .footer-socials-right {
@@ -1765,7 +1765,7 @@ footer {
 .footer-certs {
     border-top-width: 1px;
     border-top-style: solid;
-    border-top-color: var(--border-surface);
+    border-top-color: #08090a0d;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 1.5rem;
@@ -1780,7 +1780,7 @@ footer {
     position: relative;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -1788,7 +1788,7 @@ footer {
     padding-bottom: 2rem;
     border-top-width: 1px;
     border-top-style: solid;
-    border-top-color: var(--border-surface);
+    border-top-color: #08090a0d;
     gap: 1rem;
 }
 
@@ -1852,7 +1852,12 @@ footer {
     align-items: center;
     width: fit-content;
     isolation: isolate;
-    padding: 0.125rem;
+    justify-content: flex-end;
+    gap: .25rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
 }
 
 .mode-selector-image {
@@ -1877,11 +1882,5 @@ footer {
     padding: 0;
     width: 1.5rem;
     height: 1.5rem;
-    background-color: transparent;
-}
-
-.mode-selector-container:focus-visible {
-    outline-width: 2px;
-    outline-style: solid;
-    outline-color: var(--brand);
+    background-color: #08090a08;
 }
