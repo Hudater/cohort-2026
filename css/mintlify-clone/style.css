@@ -1121,7 +1121,7 @@ header {
     width: 100%;
     gap: 1rem;
     /* width: 100vw; */
-    height: 100vh;
+    /* height: 100vh; */
     overflow: hidden;
 }
 
@@ -1149,15 +1149,15 @@ header {
 }
 
 .brand-logo-footer {
-    position: absolute;
+    position: relative;
     /* z-index: 99999; */
     /* left: 50%; */
     /* transform: translateX(-50%); */
     /* bottom: -10px; */
     min-width: 0;
     overflow: clip;
-    margin-top: 27%;
-    margin-bottom: 100px;
+    /* margin-top: 27%; */
+    /* margin-bottom: 100px; */
     margin-left: -1.5rem;
     margin-right: -1.5rem;
     padding-top: 0.75rem;
@@ -1195,7 +1195,7 @@ header {
     cursor: pointer;
     transition-property: filter, opacity;
     transition-duration: 300ms;
-    height: auto;
+    height: 4rem;
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
@@ -1204,18 +1204,19 @@ header {
     border: 0;
     /* border: 2px solid red; */
     background-color: transparent;
-    width: 140px;
+    width: 130px;
     /* width: 100%; */
-    background-repeat: no-repeat;
-    background-position: center;
+    /* background-repeat: no-repeat;
+    background-position: center; */
     /* padding-top: 0; */
     /* padding-bottom: 0; */
 }
+
 .button-image-svg {
     border-radius: 0.125rem;
     height: 8rem;
     width: 100%;
-    /* min-width: 100%; */
+    min-width: 0;
     /* border: 2px solid red; */
     filter: grayscale(100%);
 }
@@ -1225,4 +1226,11 @@ header {
     outline-width: 2px;
     outline-style: solid;
     outline-color: var(--color-brand-light);
+}
+
+.case-studies {
+    width: 100%;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+    overflow: hidden;
 }
