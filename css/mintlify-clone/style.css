@@ -1050,3 +1050,60 @@ header {
 .ente-feat-cta:hover {
     background-color: #08090ab6;
 }
+/* .column-1,
+.column-2 {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    width: auto;
+} */
+
+.ente-feat-2-column-container {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 3rem;
+    padding-bottom: 3rem;
+    flex-direction: row;
+    /* flex: 1; */
+    /* justify-content: space-evenly; */
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-left: auto; */
+    /* margin-left: 20px;
+    margin-right: auto;
+    padding-left: 500px;
+    padding-right: 500px; */
+    /* justify-content: space-evenly; */
+}
+
+.column-icon-div {
+    flex-shrink: 0;
+    user-select: none;
+    width: 2rem;
+    height: 2rem;
+    color: var(--color-brand-light);
+}
+
+#column-1-icon {
+    background-image: url(./assets/img/ente-feat-column-1.svg);
+}
+
+#column-2-icon {
+    background-image: url(./assets/img/ente-feat-column-2.svg);
+}
+
+.column-heading {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #000;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+}
+
+.column-description {
+    color: #393A3B;
+}
