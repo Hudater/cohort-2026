@@ -1234,3 +1234,109 @@ header {
     padding-bottom: 4.5rem;
     overflow: hidden;
 }
+
+.case-text-area {
+    width: 100%;
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.case-text-title {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: var(--color-brand-light);
+}
+
+.case-text-heading {
+    text-align: center;
+    --tw-leading: 110%;
+    --tw-font-weight: var(--font-weight-semibold);
+    line-height: 110%;
+    font-weight: var(--font-weight-semibold);
+    color: #000;
+    letter-spacing: -.02em;
+    font-size: max(1.75rem, min(4vw, 2.5rem));
+}
+
+.case-text-para {
+    text-align: center;
+    color: #393A3B;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    max-width: 40rem;
+}
+
+.case-studies-carousel {
+    position: relative;
+    width: 100%;
+    padding-left: 18%;
+    padding-right: 18%;
+}
+
+.carousel-content {
+    overflow: visible;
+    display: flex;
+    margin-left: -1rem;
+}
+
+.carousel-item {
+    min-width: 0;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: 100%;
+    padding-left: 1rem;
+    max-width: 410px;
+}
+
+.carousel-item>a {
+    /* border: 2px solid red; */
+    width: 100%;
+    outline: none;
+}
+
+.carousel-image-div {
+    width: 100%;
+    border-radius: 1rem;
+    /* overflow: hidden; */
+    position: relative;
+    margin-bottom: 0.5rem;
+    /* height: 290px; */
+}
+
+.carousel-brand-bg {
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.svg-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: #ffffff !important;
+    color: #ffffff !important;
+    height: 45px;
+    width: 230px;
+}
