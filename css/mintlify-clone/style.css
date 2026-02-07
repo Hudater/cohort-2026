@@ -1775,6 +1775,14 @@ footer {
     gap: 1.5rem;
 }
 
+.footer-cert-para {
+    font-size: 0.875rem;
+    line-height: 150%;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: center;
+}
+
 .footer-info {
     width: 100%;
     position: relative;
@@ -1785,7 +1793,7 @@ footer {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 6rem;
     border-top-width: 1px;
     border-top-style: solid;
     border-top-color: #08090a0d;
