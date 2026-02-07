@@ -68,7 +68,7 @@
     --color-text-soft: #ffffffb3;
     --color-text-sub: #ffffff99;
     --color-border-sub: #08090a12;
-    --color-background-soft: #08090a26;
+    --color-background-soft: #08090a08;
     --color-border-surface: #ffffff0d;
     --color-muted: #838484;
     --color-border-soft: #ffffff26;
@@ -877,19 +877,19 @@ header {
 }
 
 #column-1 {
-    background-image: url(./assets/img/column-1-img.png);
+    background-image: url(./assets/img/column-1-img.jpg);
     border: none;
     /* border-radius: 90px; */
 }
 
 #column-2 {
-    background-image: url(./assets/img/column-2-img.png);
+    background-image: url(./assets/img/column-2-img.jpg);
     border: none;
     /* border-radius: 90px; */
 }
 
 #bottom-image {
-    background-image: url(./assets/img/row-bottom-img.png);
+    background-image: url(./assets/img/row-bottom-img.jpg);
     border: none;
     width: 100%;
     height: 30rem;
@@ -951,4 +951,102 @@ header {
     text-align: center;
     max-width: 40rem;
     text-wrap: balance;
+}
+
+/* Enterprise feat section */
+
+.enterprise-features {
+    background-color: var(--color-background-soft);
+    width: 100%;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.ente-feat-container {
+    width: 100%;
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ente-feat-heading-cta {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-bottom: 3rem;
+    flex-direction: row;
+}
+
+.ente-feat-text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 40rem;
+}
+
+.ente-feat-title {
+    color: var(--color-brand-light);
+    font-family: Geist Mono, Geist Mono Fallback, monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    text-align: left;
+
+}
+
+.ente-feat-heading {
+    text-align: left;
+    font-size: 42.5px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: -.02em;
+}
+
+.ente-feat-descriptive {
+    text-align: center;
+    text-wrap: balance;
+    font-weight: 400;
+    color: #393A3B;
+}
+
+.ente-feat-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    gap: 0.375rem;
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 9999px;
+    font-weight: 500;
+    outline-offset: 2px;
+    flex-shrink: 0;
+    transition-property: color, background-color;
+    transition-duration: 100ms;
+    color: var(--color-background-invert);
+    background-color: var(--color-text-invert);
+    border: 1px solid var(--color-background-invert);
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.4375rem;
+    padding-bottom: 0.4375rem;
+    margin-right: 0.25rem;
+    margin-top: auto;
+    align-self: flex-end;
+}
+
+.ente-feat-cta:focus-visible {
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: var(--color-brand-light);
+}
+
+.ente-feat-cta:hover {
+    background-color: #08090ab6;
 }
