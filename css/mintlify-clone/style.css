@@ -203,7 +203,8 @@ header {
     font-weight: 500;
     line-height: 150%;
     color: var(--color-text-main);
-    /* border: 2px solid red; */
+    color: #000
+        /* border: 2px solid red; */
 
 }
 
@@ -391,7 +392,7 @@ header {
     border-color: transparent;
     border-width: 1px;
     border-style: solid;
-    color: var(--color-text-main);
+    color: #000;
 }
 
 .header-cta-a-signup {
@@ -687,7 +688,6 @@ header {
     margin-right: auto;
     padding-top: 6rem;
     padding-bottom: 6rem;
-    z-index: 600;
     /* border: 2px solid red; */
 }
 
@@ -701,7 +701,6 @@ header {
     height: 100%;
     justify-content: center;
     align-items: center;
-    z-index: 600;
     /* border: 2px solid blue; */
     margin: auto;
     padding: auto;
@@ -714,18 +713,16 @@ header {
     justify-content: center;
     height: 4rem;
     width: 100%;
-    z-index: 600;
     /* border: 2px solid green; */
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .company-logos-svg {
-    z-index: 600;
     width: 100%;
     height: 68px;
     width: auto;
-    
+
 }
 
 #company-logos-svg-anthropic {
@@ -772,4 +769,186 @@ header {
 #company-logos-svg-lovable {
     /* border: 5px solid orange; */
     background-image: url(./assets/company-logos/lovable-logo.svg);
+}
+
+/* Feature highligh section */
+
+
+.feat-high {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 64rem;
+    margin-bottom: 9rem;
+}
+
+.feat-high-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 100%;
+    gap: 1rem;
+}
+
+.feat-high-text-h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.feat-high-text-para {
+    max-width: 40.5rem;
+    text-align: center;
+    color: #393A3B;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+}
+
+.feat-high-visual-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.feat-high-visual-two-columns {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.two-columns {
+    border-radius: 1.5rem;
+    border: 1px solid var(--color-border-sub);
+    padding: 0.375rem;
+    width: auto;
+    flex: 1;
+}
+
+.column-text-area {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.small-top-left-para {
+    color: var(--color-brand-light);
+    font-family: Geist Mono, Geist Mono Fallback, monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.top-left-heading {
+    font-weight: 500;
+    line-height: 1.3;
+    color: #000;
+    font-size: 1.5rem;
+    letter-spacing: -0.24px;
+}
+
+.descriptive-feat-para {
+    color: #393A3B;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-wrap: balance;
+}
+
+.visual-svg {
+    width: 100%;
+    height: 20rem;
+    position: relative;
+    isolation: isolate;
+    user-select: none;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#column-1 {
+    background-image: url(./assets/img/column-1-img.png);
+    border: none;
+    /* border-radius: 90px; */
+}
+
+#column-2 {
+    background-image: url(./assets/img/column-2-img.png);
+    border: none;
+    /* border-radius: 90px; */
+}
+
+#bottom-image {
+    background-image: url(./assets/img/row-bottom-img.png);
+    border: none;
+    width: 100%;
+    height: 30rem;
+    /* height: 100%; */
+    position: relative;
+    isolation: isolate;
+    user-select: none;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.feat-high-visual-single-bottom {
+    width: 100%;
+    border-radius: 1.5rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-border-sub);
+}
+
+.single-bottom-text-area {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0.375rem;
+    margin-bottom: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.single-bottom-para {
+    color: var(--color-brand-light);
+    font-family: "Geist Mono", "Geist Mono Fallback", monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    text-wrap: balance;
+}
+
+.single-bottom-heading {
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--color-text-main);
+    font-size: 1.5rem;
+    letter-spacing: -0.24px;
+    color: #000;
+}
+
+.single-bottom-descriptive-para {
+    color: #393A3B;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 40rem;
+    text-wrap: balance;
 }
