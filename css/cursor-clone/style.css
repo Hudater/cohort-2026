@@ -26,6 +26,7 @@
     --theme-fg: #26251e;
     --color-theme-text: #26251e;
 
+    --image-border-radius: 4px;
     --button-padding-default: .78em 1.35em .8em;
     --button-padding-md-sm: .6em 1.25em .62em;
     --button-padding-sm: .4em .75em .42em;
@@ -48,6 +49,7 @@ html {
     line-height: 1.5;
     font-family: "CursorGothic", "CursorGothic Fallback", system-ui, Helvetica Neue, Helvetica, Arial, sans-serif;
     -webkit-tap-highlight-color: transparent;
+
 }
 
 * {
@@ -204,6 +206,7 @@ header {
 
 main {
     min-height: 70vh;
+    height: 200vh;
 }
 
 .section {
@@ -277,4 +280,45 @@ main {
     background-color: #3b3a33;
     border-color: #3b3a33;
     color: var(--theme-bg);
+}
+
+.hero-image-container {
+    margin-top: 5rem;
+}
+
+.hero-image {
+    border-radius: var(--image-border-radius);
+}
+
+.section-trusted-by {
+    padding-bottom: 35px;
+    padding-top: 0px;
+}
+
+.trusted-container {
+    /* display: flex; */
+    text-align: center;
+    /* flex-direction: row; */
+}
+
+.trusted-heading {
+    margin-bottom: 24px;
+}
+
+.trusted-logos {
+    display: flex;
+    justify-content: space-around;
+    gap: 10.5px;
+}
+
+.trusted-logo-container{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 6.25rem;
+    padding-inline: 7.96875px;
+    background-color: #f2f1ed;
+    border-radius: var(--image-border-radius);
+    width: 100%;
 }
