@@ -570,3 +570,74 @@ main {
     height: auto;
     object-fit: cover;
 }
+
+
+.changelog-container {
+    max-width: 1300px;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.changelog-heading {
+    color: var(--color-theme-text);
+    font-size: 1.625rem;
+    line-height: 1.5;
+    letter-spacing: -0.0125em;
+    font-weight: 400;
+}
+
+.changelog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10.5px;
+}
+
+.change-articles {
+    display: flex;
+    flex-direction: column;
+}
+
+.changelog-link {
+    padding-bottom: 22px;
+    flex-grow: 1;
+    position: relative;
+    padding-inline: 1.09375rem;
+    padding-top: 17px;
+    background-color: #f2f1ed;
+    border-radius: var(--image-border-radius);
+}
+
+.change-para {
+    color: var(--theme-fg);
+    padding-top: 15px;
+}
+
+.change-ver {
+    font-size: .875rem;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    border: 1px solid;
+    border-color: inherit;
+    color: var(--theme-fg);
+    border-radius: 3.40282e38px;
+    padding: .28em .65em .29em;
+    line-height: 1;
+    display: inline-flex;
+    position: relative;
+    top: .03125rem;
+}
+
+.change-time {
+    color: var(--theme-fg);
+    padding-left: 15px;
+}
+
+.change-link-below {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.005em;
+    color: #f54e00;
+    text-decoration: none;
+}
