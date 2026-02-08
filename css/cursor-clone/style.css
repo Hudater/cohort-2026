@@ -311,7 +311,7 @@ main {
     gap: 10.5px;
 }
 
-.trusted-logo-container{
+.trusted-logo-container {
     display: flex;
     position: relative;
     align-items: center;
@@ -321,4 +321,17 @@ main {
     background-color: #f2f1ed;
     border-radius: var(--image-border-radius);
     width: 100%;
+}
+
+.section-demo {
+    padding-inline: 0;
+    /* display: flex;
+    flex-direction: column; */
+    /* margin-bottom: 95px; */
+    /* gap: 400px; */
+}
+
+.demo-images-container {
+    margin-bottom: 95px;
+    gap: 400px;
 }
