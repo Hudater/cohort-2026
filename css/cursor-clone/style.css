@@ -175,13 +175,13 @@ header {
 }
 
 .btn-login:hover {
-    background: #f2f1ed;
+    background: var(--theme-bg);
 }
 
 .btn-download {
     background-color: var(--color-theme-text);
     border: 1px solid var(--color-theme-text);
-    color: #f7f7f4;
+    color: var(--theme-bg);
     cursor: pointer;
     font-size: .875rem;
     font-weight: 400;
@@ -199,5 +199,82 @@ header {
 .btn-download:hover {
     background-color: #3b3a33;
     border-color: #3b3a33;
-    color: #f7f7f4;
+    color: var(--theme-bg);
+}
+
+main {
+    min-height: 70vh;
+}
+
+.section {
+    color: var(--color-theme-text);
+    background-color: var(--theme-bg);
+    padding-top: 4.2rem;
+    padding-right: 1.25rem;
+    padding-bottom: 4.2rem;
+    padding-left: 1.25rem;
+
+}
+
+.section-hero {
+    padding-top: 7rem;
+    padding-right: 1.25rem;
+    padding-bottom: 4.2rem;
+    padding-left: 20rem;
+    /* padding-left: 21.25px; */
+    /* padding-right: 21.25px; */
+}
+
+.container {
+    max-width: 1300px;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.text-area {
+    text-align: left;
+    max-width: 65ch;
+    margin-bottom: 60px;
+}
+
+.left-heading {
+    text-wrap: balance;
+    font-size: 1.625rem;
+    line-height: 1.25;
+    font-weight: 400;
+    letter-spacing: -.0125em;
+}
+
+.cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    column-gap: 10.625px;
+    margin-top: -2rem;
+}
+
+.hero-download-button {
+    text-align: left;
+    color: var(--color-theme-text);
+    background-color: var(--color-theme-text);
+    border: 1px solid var(--color-theme-text);
+    color: var(--theme-bg);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    border-radius: 3.40282e38px;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    display: inline-flex;
+}
+
+.hero-download-button:hover {
+    background-color: #3b3a33;
+    border-color: #3b3a33;
+    color: var(--theme-bg);
 }
