@@ -71,7 +71,9 @@ header {
     margin-right: auto;
     margin-top: 1rem;
     position: sticky;
-    inset: 0;
+    /* inset: 0; */
+    top: 0;
+    z-index: 1000;
     width: 100%;
     backdrop-filter: blur(2px);
     background-color: var(--color-bg-transparent);
@@ -233,23 +235,43 @@ header {
     list-style: none;
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+    .blogs-ol {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .blogs-ol {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /* This part handles the last column if number of card are less than 4 */
-.blog-li:last-child:nth-child(4n+1) {
-    grid-column: span 4;
+@media (min-width: 900px) {
+    .blog-li:last-child:nth-child(4n+1) {
+        grid-column: span 4;
+    }
+
+    /* 2 items */
+    .blog-li:nth-last-child(2):nth-child(4n+1),
+    .blog-li:last-child:nth-child(4n+2) {
+        grid-column: span 2;
+    }
+
+    /* 3 items */
+    .blog-li:nth-last-child(3):nth-child(4n + 1) {
+        grid-column: span 2;
+    }
 }
 
-/* 2 items */
-.blog-li:nth-last-child(2):nth-child(4n+1),
-.blog-li:last-child:nth-child(4n+2) {
-    grid-column: span 2;
-}
-
-/* 3 items */
-.blog-li:nth-last-child(3):nth-child(4n + 1) {
-    grid-column: span 2;
+@media (min-width: 600px) {
+    .blog-li:last-child:nth-child(4n+1) {
+        grid-column: span 2;
+    }
 }
 
 .blog-li {
