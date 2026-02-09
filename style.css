@@ -251,29 +251,28 @@ header {
 }
 
 /* This part handles the last column if number of card are less than 4 */
+/* for desktop */
 @media (min-width: 900px) {
+.blog-li:last-child:nth-child(4n+1) {
+    grid-column: span 4;
+}
+
+/* 2 items */
+.blog-li:nth-last-child(2):nth-child(4n+1),
+.blog-li:last-child:nth-child(4n+2) {
+    grid-column: span 2;
+}
+
+/* 3 items */
+.blog-li:nth-last-child(3):nth-child(4n + 1) {
+    grid-column: span 2;
+}
+/* for tablet */
+@media (min-width: 600px) {
     .blog-li:last-child:nth-child(4n+1) {
         grid-column: span 4;
     }
-
-    /* 2 items */
-    .blog-li:nth-last-child(2):nth-child(4n+1),
-    .blog-li:last-child:nth-child(4n+2) {
-        grid-column: span 2;
-    }
-
-    /* 3 items */
-    .blog-li:nth-last-child(3):nth-child(4n + 1) {
-        grid-column: span 2;
-    }
 }
-
-@media (min-width: 600px) {
-    .blog-li:last-child:nth-child(4n+1) {
-        grid-column: span 2;
-    }
-}
-
 .blog-li {
     /* border: 1px solid #ddd; */
     max-height: 12rem;
