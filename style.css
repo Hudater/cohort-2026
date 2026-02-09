@@ -71,7 +71,7 @@ header {
     margin-right: auto;
     margin-top: 1rem;
     position: sticky;
-    top: 0;
+    inset: 0;
     width: 100%;
     backdrop-filter: blur(2px);
     background-color: var(--color-bg-transparent);
