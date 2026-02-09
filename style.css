@@ -238,21 +238,25 @@ header {
     grid-template-columns: 1fr;
 }
 
+/* TABLET ke liye */
 @media (min-width: 600px) {
+    .blog-li:last-child:nth-child(4n+1) {
+        grid-column: span 2;
+    }
+
     .blogs-ol {
         grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 900px) {
-    .blogs-ol {
-        grid-template-columns: repeat(4, 1fr);
     }
 }
 
 /* This part handles the last column if number of card are less than 4 */
 /* for desktop */
 @media (min-width: 900px) {
+
+    .blogs-ol {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
     .blog-li:last-child:nth-child(4n+1) {
         grid-column: span 4;
     }
@@ -266,13 +270,6 @@ header {
     /* 3 items */
     .blog-li:nth-last-child(3):nth-child(4n + 1) {
         grid-column: span 2;
-    }
-}
-
-/* for tablet */
-@media (min-width: 600px) {
-    .blog-li:last-child:nth-child(4n+1) {
-        grid-column: span 4;
     }
 }
 
