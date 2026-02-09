@@ -78,7 +78,13 @@ header {
     backdrop-filter: blur(2px);
     background-color: var(--color-bg-transparent);
 }
+.nav {
+    position: relative;
+}
 
+.nav-toggle {
+    display: none;
+}
 .nav-ul {
     list-style: none;
     display: flex;
@@ -127,6 +133,47 @@ header {
 .hero-section {
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: .5rem;
+    width: 32px;
+    margin: auto;
+    font-size: 1.6rem;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background: var(--color-fg);
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: 0.25s ease;
+}
+
+/* Hamburger menu */
+
+
+@media (max-width: 700px) {
+
+    .hamburger {
+        display: block;
+        text-align: center;
+        padding: .5rem;
+    }
+
+    .nav-ul {
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .3s ease;
+    }
+
+    #nav-toggle:checked+.hamburger+.nav-ul {
+        max-height: 300px;
+    }
 }
 
 .hero-text {
