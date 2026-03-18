@@ -433,8 +433,8 @@ section:last-of-type {
     color: var(--text);
     font-weight: 600;
     text-align: center;
-    max-width: 15rem;
-    margin-inline: auto;
+    /* max-width: 15rem; */
+    /* margin-inline: auto; */
 }
 
 /* ───────────────────────────────────────────
