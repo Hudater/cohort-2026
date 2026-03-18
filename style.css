@@ -135,8 +135,8 @@ header {
     z-index: 100;
     width: 100%;
     padding: 16px clamp(20px, 5vw, 32px);
-    background: rgba(10, 10, 10, 0.5);
-    backdrop-filter: blur(16px);
+    background: rgba(10, 10, 10, 0.3);
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
 }
@@ -363,77 +363,78 @@ section:last-of-type {
 .blogs-ol {
     list-style: none;
     display: grid;
-    gap: 16px;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
+    gap: 1rem;
+    grid-template-columns: 1fr;
     width: 100%;
 }
 
+/* TABLET */
+@media (min-width: 600px) {
+    .blogs-ol {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blog-li:last-child:nth-child(4n+1) {
+        grid-column: span 2;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 900px) {
+    .blogs-ol {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .blog-li:last-child:nth-child(4n+1) {
+        grid-column: span 4;
+    }
+
+    /* 2 items in last row */
+    .blog-li:nth-last-child(2):nth-child(4n+1),
+    .blog-li:last-child:nth-child(4n+2) {
+        grid-column: span 2;
+    }
+
+    /* 3 items in last row */
+    .blog-li:nth-last-child(3):nth-child(4n + 1) {
+        grid-column: span 2;
+    }
+}
+
 .blog-li {
+    max-height: 12rem;
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: var(--card-radius);
-    transition:
-        border-color 160ms ease,
-        background 160ms ease,
-        transform 140ms ease;
+    transition: 0.2s ease;
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
-    min-height: 120px;
     width: 100%;
 }
 
 .blog-li:hover {
-    background: var(--surface-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
     border-color: var(--card-border-hover);
-    transform: translateY(-2px);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
 }
 
-/* last row with 1 element: takes 100% */
-.blog-li:nth-last-child(1):nth-child(4n+1) {
-    grid-column: 1 / -1;
-}
-
-/* last row with 2 elements: each takes 50% */
-.blog-li:nth-last-child(2):nth-child(4n+3) {
-    grid-column: span 2;
-}
-
-.blog-li:nth-last-child(1):nth-child(4n) {
-    grid-column: span 2;
-}
-
-/* last row with 3 elements: each takes 33%, outer ones have margin */
-.blog-li:nth-last-child(3):nth-child(4n+2) {
-    grid-column: span 1;
-    margin-left: 0.5px;
-}
-
-.blog-li:nth-last-child(2):nth-child(4n+2) {
-    grid-column: span 1;
-}
-
-.blog-li:nth-last-child(1):nth-child(4n+2) {
-    grid-column: span 1;
-    margin-right: 0.5px;
-}
-
 .blog-link {
     display: flex;
-    width: 100%;
-    height: 100%;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100%;
     padding: 1.5rem;
     text-decoration: none;
     color: var(--text);
     font-weight: 600;
     text-align: center;
-    line-height: 1.6;
-    border-radius: inherit;
+    max-width: 15rem;
+    margin-inline: auto;
 }
 
 /* ───────────────────────────────────────────
@@ -474,8 +475,12 @@ footer a:hover {
    RESPONSIVE
 ─────────────────────────────────────────── */
 
-@media (max-width: 520px) {
+.three-orphans-row {
+    display: contents;
+}
 
+/* MOBILE: 1 column (no orphans possible) */
+@media (max-width: 599px) {
     .hamburger {
         display: flex;
     }
@@ -492,7 +497,6 @@ footer a:hover {
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         border-bottom: 1px solid var(--border);
-
         opacity: 0;
         transform: translateY(-8px);
         pointer-events: none;
@@ -530,91 +534,59 @@ footer a:hover {
         color: var(--text);
         background: rgba(255, 255, 255, 0.04);
     }
-
-    .blogs-ol {
-        grid-template-columns: 1fr;
-    }
-
-    /* reset all nth-child rules on mobile */
-    .blog-li:nth-last-child(1):nth-child(4n+1),
-    .blog-li:nth-last-child(2):nth-child(4n+3),
-    .blog-li:nth-last-child(1):nth-child(4n),
-    .blog-li:nth-last-child(3):nth-child(4n+2),
-    .blog-li:nth-last-child(2):nth-child(4n+2),
-    .blog-li:nth-last-child(1):nth-child(4n+2) {
-        grid-column: 1;
-        margin-left: 0;
-        margin-right: 0;
-    }
 }
 
-@media (min-width: 600px) {
-    .blogs-ol {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-/* keep 4-column rules only for desktop */
-@media (min-width: 901px) {
-    .blogs-ol {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    /* last row with 1 element: takes 100% */
-    .blog-li:nth-last-child(1):nth-child(4n+1) {
-        grid-column: 1 / -1;
-    }
-
-    /* last row with 2 elements: each takes 50% */
-    .blog-li:nth-last-child(2):nth-child(4n+3),
-    .blog-li:nth-last-child(1):nth-child(4n) {
-        grid-column: span 2;
-    }
-
-    /* last row with 3 elements */
-    .blog-li:nth-last-child(3):nth-child(4n+2) {
-        grid-column: span 1;
-        margin-left: 0.5px;
-    }
-
-    .blog-li:nth-last-child(2):nth-child(4n+2) {
-        grid-column: span 1;
-    }
-
-    .blog-li:nth-last-child(1):nth-child(4n+2) {
-        grid-column: span 1;
-        margin-right: 0.5px;
-    }
-}
-
-/* below 900px: 2 columns */
-@media (max-width: 900px) {
+/* TABLET: 2 columns (single orphan stretches full) */
+@media (min-width: 600px) and (max-width: 899px) {
     .blogs-ol {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* reset 4-col placement rules */
-    .blog-li {
-        grid-column: auto;
-        margin-left: 0;
-        margin-right: 0;
+    /* If last card is alone in last row, stretch it across both columns */
+    .blog-li:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
     }
 
-    /* if last row has 1 item, make it full width */
-    .blog-li:nth-last-child(1):nth-child(odd) {
+    .three-orphans-row {
         grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .three-orphans-row .blog-li {
+        flex: 0 0 calc((100% - 2rem) / 3);
     }
 }
 
-/* below 600px: 1 column, all full width */
-@media (max-width: 600px) {
+/* DESKTOP: 4 columns (with orphan logic) */
+@media (min-width: 900px) {
     .blogs-ol {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(4, 1fr);
     }
 
-    .blog-li {
+    /* 1 leftover: stretch full width */
+    .blog-li:last-child:nth-child(4n + 1) {
         grid-column: 1 / -1;
-        margin-left: 0;
-        margin-right: 0;
+    }
+
+    /* 2 leftovers: each spans 2 columns (centered pair) */
+    .blog-li:not(.orphan-item):nth-last-child(2):nth-child(4n + 1),
+    .blog-li:not(.orphan-item):last-child:nth-child(4n + 2) {
+        grid-column: span 2;
+    }
+
+    /* 3 leftovers: use wrapper */
+    .three-orphans-row {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .three-orphans-row .blog-li {
+        flex: 0 0 calc((100% - 2rem) / 3);
+        max-height: 12rem;
+        grid-column: unset;
     }
 }
