@@ -7,7 +7,7 @@ if (items.length % 4 === 3) {
     wrapper.className = 'three-orphans-row';
     ol.appendChild(wrapper);
     last3.forEach(li => {
-        li.classList.add('orphan-item');  // ye add kiya
+        li.classList.add('orphan-item');
         wrapper.appendChild(li);
     });
 }
